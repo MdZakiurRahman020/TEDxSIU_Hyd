@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEDxSIU Hyderabad - Linktree</title>
+    <!-- Tailwind CSS CDN for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #121212; /* Dark mode background */
+        }
+
+        /* Base styles for dark mode with background image */
+        body {
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow-x: hidden;
+    background-color: var(--bg-color);
+    background-image: url('./image/img2.png'); /* Default (desktop & tab) */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #e0e0e0; /* Dark mode text */
+}
+
+/* Phones (max-width 768px) */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('./image/img1.png');
+    }
+}
+
+        /* Dark mode specific color overrides */
+        .text-red-600 { color: #FF5A5F; }
+        .text-gray-900 { color: #e0e0e0; }
+        .text-gray-800 { color: #e0e0e0; }
+        .text-gray-700 { color: #e0e0e0; }
+        .text-gray-600 { color: #9ca3af; }
+        .border-red-400 { border-color: #FF5A5F; }
+
+        /* Liquid glass effect on cards */
+        .card {
+            backdrop-filter: blur(10px);
+            background-color: rgba(40, 40, 40, 0.15); /* Adjusted translucency */
+            border: 1px solid #333;
+            transition: transform 0.3s ease-in-out, background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+        }
+
+        /* Hover effect for all cards */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.2);
+            background-color: rgba(40, 40, 40, 0.15); /* Keep original translucent color */
+        }
+        
+        /* Bouncy animation on elements */
+        .bouncy-on-load {
+            animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+        }
+
+        .bouncy-on-load-2 {
+            animation: bounce 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55) both;
+            animation-delay: 0.2s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Center the image within the header */
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Style for the logo inside the header */
+        .logo-link {
+            transition: color 0.3s ease;
+        }
+        .logo-link svg path {
+            transition: fill 0.3s ease;
+        }
+        /* Hover state for logo path to turn white */
+        .logo-link:hover svg path {
+            fill: white;
+        }
+        
+        
+
+        
+    /* New styles for embedded video card */
+    .video-card {
+        background-color: rgba(40, 40, 40, 0.15);
+        border: 1px solid #333;
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 1rem;
+    }
+
+    .video-card iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+        /* New hover styles for the main links */
+        a.card:hover h2,
+        a.card:hover p,
+        a.card:hover i {
+            color: #fff !important;
+        }
+    </style>
+</head>
+<body class="dark-mode antialiased max-w-screen overflow-x-hidden">
+    <div class="container mx-auto p-4 sm:p-8 md:p-12 max-w-4xl relative z-10">
+        <!-- Header Section -->
+        <header class="card rounded-2xl p-6 sm:p-10 shadow-lg mb-8 flex flex-col items-center text-center relative overflow-hidden">
+            <div class="header-content relative z-10">
+                <img
+                    src="./image/Untitled design (1).png"
+                    alt="TEDxSIU Hyderabad Logo"
+                    class="w-32 h-32 md:w-40 md:h-40 rounded-full border-4 border-red-600 mb-6 shadow-md bouncy-on-load object-cover"
+                >
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-2 bouncy-on-load" style="color: #e11818;">TEDxSIU Hyderabad</h1>
+                <p class="text-lg md:text-xl text-white bouncy-on-load-2">Ideas Worth Spreading: A Student-led TED event at Symbiosis International University, Hyderabad.</p>
+                <!-- Social Links with Logos -->
+<div class="flex items-center space-x-6 mt-4 bouncy-on-load">
+  <!-- Official TEDx Site -->
+  <a href="https://tedxsiuhyderabad.siu.edu.in/" 
+     target="_blank" 
+     class="text-[#e11818] hover:text-white transition-colors duration-300 logo-link" 
+     aria-label="Official TEDx Site">
+    <svg class="w-8 h-8 md:w-10 md:h-10 fill-current" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40-17.9-40-40-40zm-15 25h-5c-2.8 0-5 2.2-5 5v20c0 2.8 2.2 5 5 5h5c2.8 0 5-2.2 5-5v-20c0-2.8-2.2-5-5-5zm25 25c0 2.8-2.2 5-5 5h-5c-2.8 0-5-2.2-5-5v-10h-5v10c0 2.8-2.2 5-5 5h-5c-2.8 0-5-2.2-5-5v-30c0-2.8 2.2-5 5-5h25c8.3 0 15 6.7 15 15v5c0 8.3-6.7 15-15 15zm0-25c-2.8 0-5 2.2-5 5v5h5c2.8 0 5-2.2 5-5v-5c0-2.8-2.2-5-5-5z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/tedxsiuhyderabad?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+     target="_blank" 
+     class="text-[#e11818] hover:text-white transition-colors duration-300" 
+     aria-label="Instagram">
+    <i class="fab fa-instagram text-3xl md:text-4xl"></i>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="https://www.linkedin.com/company/tedx-siu-hyderabad/posts/?feedView=all" 
+     target="_blank" 
+     class="text-[#e11818] hover:text-white transition-colors duration-300" 
+     aria-label="LinkedIn">
+    <i class="fab fa-linkedin-in text-3xl md:text-4xl"></i>
+  </a>
+</div>
+            </div>
+        </header>
+
+        <!-- Links Section -->
+        <section class="grid grid-cols-1 gap-6 mb-8">
+            <!-- Embedded Video -->
+             
+            <div class="video-card">
+    <iframe 
+        src="https://www.youtube.com/embed/cyWL7FdgzK4" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+    </iframe>
+</div>
+
+            <!-- Register Now Link -->
+<a href="https://forms.gle/MeHNR8V3eLM3C7kz9" target="_blank" class="card rounded-2xl p-6 sm:p-8 flex items-center justify-between shadow-lg transition-all duration-300">
+    <div class="flex items-center space-x-4">
+        <i class="fas fa-ticket-alt text-2xl text-[#e11818] transition-colors duration-300"></i>
+        <div>
+            <h2 class="text-lg font-semibold transition-colors duration-300" style="color: #e11818;">Register Now</h2>
+            <p class="text-sm text-white-600 transition-colors duration-300">Register for the event now!</p>
+        </div>
+    </div>
+    <i class="fas fa-arrow-right text-lg text-red-600 transition-colors duration-300"></i>
+</a>
+</section>
+
+        <!-- Footer -->
+        <footer class="text-center text-white mt-12 text-sm">
+            <p>&copy; 2024 TEDxSIU Hyderabad. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
